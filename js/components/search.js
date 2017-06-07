@@ -12,9 +12,10 @@ const Detalles = (station, update) =>{
  details.append(address);
  details.append(district);
 
- details.on("click", (e) => {
+ iconMap.on("click", (e) => {
     state.selectedStation = station;
     update();
+    console.log(update)
   });
  return details;
 };
