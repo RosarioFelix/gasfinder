@@ -9,5 +9,15 @@ const Header = (update) => {
   header.append(title);
   header.append(iconCar);
 
+  if(state.selectedStation){
+    
+    header.prepend(icon);
+    icon.on('click',(e) => {
+        e.preventDefault();
+        state.selectedStation = null;
+        update();
+        console.log(update);
+      });
+  };
   return header;
 }

@@ -10,7 +10,7 @@ const render = (root) => {
   }else {
     const showMap = GoogleMap();
     wrapper.append(showMap);
-    wrapper.append(StationDetails());
+    wrapper.append(StationDetails(_ => render(root)));
     root.append(wrapper);
       showMap.initMap();
   }
